@@ -1,0 +1,132 @@
+{
+  "llmflow_id": "bca9c0db-addb-4925-96ef-a9e944d13bd0",
+  "application_id": "fbYlPZYBYgQ238HoCOtx",
+  "name": "test-flow",
+  "description": "Testing flow creating",
+  "status": "draft",
+  "version": "1.0.0",
+  "created_at": "2025-04-16T05:50:31.924Z",
+  "updated_at": "2025-04-16T06:04:32.213Z",
+  "data": {
+    "name": "test-flow",
+    "description": "Testing flow creating",
+    "status": "draft",
+    "version": "1.0.0",
+    "nodes": [
+      {
+        "id": "Start",
+        "type": "start",
+        "position": {
+          "x": 126.44720133751514,
+          "y": 103.54270457071985
+        },
+        "data": {
+          "label": "Start",
+          "labelDescription": "Define your input schema",
+          "details": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userInput": {
+                  "type": "string",
+                  "description": "This is input provided by the user"
+                }
+              }
+            },
+            "description": "Define your input schema",
+            "testInput": {}
+          }
+        },
+        "measured": {
+          "width": 120,
+          "height": 62
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "Agent-1",
+        "type": "agentSeq",
+        "position": {
+          "x": 313.88440624290587,
+          "y": 164.4271433668394
+        },
+        "data": {
+          "label": "Agent-1",
+          "labelDescription": "Configure your agent",
+          "details": {
+            "systemPrompt": "You are a highly capable AI assistant with a focus on clear communication and problem-solving. Approach each query with:\n1. Clear understanding of the context\n2. Structured, step-by-step responses\n3. Concise yet comprehensive explanations\n4. Proactive identification of potential issues\nMaintain a professional yet approachable tone throughout the interaction.",
+            "queryTemplate": "what is golang ",
+            "temperature": 0.1,
+            "model": "copilot",
+            "strategy": "map-reduce",
+            "inputSchema": {},
+            "outputSchema": {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string",
+                  "description": ""
+                }
+              }
+            },
+            "description": "",
+            "toolOutput": null,
+            "customPresets": {},
+            "updatedQueryTemplate": ""
+          }
+        },
+        "measured": {
+          "width": 220,
+          "height": 356
+        },
+        "selected": true,
+        "dragging": false
+      },
+      {
+        "id": "End",
+        "type": "end",
+        "position": {
+          "x": 766.5728891863741,
+          "y": 203.50753801561018
+        },
+        "data": {
+          "label": "End",
+          "labelDescription": "Response Value",
+          "details": {
+            "description": "Response Value"
+          }
+        },
+        "measured": {
+          "width": 120,
+          "height": 62
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "Start-Agent-1",
+        "source": "Start",
+        "target": "Agent-1",
+        "sourceHandle": null,
+        "targetHandle": null,
+        "type": "bezier",
+        "animated": true
+      },
+      {
+        "id": "Agent-1-End",
+        "source": "Agent-1",
+        "target": "End",
+        "sourceHandle": null,
+        "targetHandle": null,
+        "type": "bezier",
+        "animated": true
+      }
+    ],
+    "input_schema": {}
+  },
+  "current_version_number": 1,
+  "id": "bca9c0db-addb-4925-96ef-a9e944d13bd0"
+}
